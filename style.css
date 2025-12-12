@@ -555,6 +555,7 @@ footer {
         font-size: 1rem;
     }
 }
+
 /* Highlight for the specific name */
 .grandson-name {
     color: var(--color-red);
@@ -563,5 +564,5 @@ footer {
     text-decoration-thickness: 3px;
     margin: 0 5px;
     display: inline-block;
-    transform: rotate(-2deg); /* Subtle tilt for emphasis */
+    /* transform removed per user request */
 }
