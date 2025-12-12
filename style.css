@@ -566,3 +566,23 @@ footer {
     display: inline-block;
     /* transform removed per user request */
 }
+/* Legal Text Divider */
+.legal-divider {
+    height: 1px;
+    background: #e0e0e0;
+    margin: 1.5rem 0;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Header Message */
+.invite-msg {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    color: var(--color-gold-light);
+}
