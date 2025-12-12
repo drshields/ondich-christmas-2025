@@ -114,8 +114,17 @@
 
                 <div class="form-group">
                     <label for="yourName">Your Name *</label>
-                    <input type="text" id="yourName" name="Name" class="form-control"
-                        placeholder="The Ondich Favorite..." required>
+                    <input type="text" id="yourName" name="Name" class="form-control" placeholder="What people call you"
+                        required>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="bringing" name="Will Bring Something" value="Yes">
+                    <label for="bringing">I will be bringing something</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="whatBringing" name="What Bringing" class="form-control"
+                        placeholder="Dice Game Gifts, Food, Etc..">
                 </div>
 
                 <div class="form-group">
@@ -133,15 +142,7 @@
                             Lavon's favorite Grandchild and
                             family member in general</label>
                     </div>
-
-                    <div class="legal-divider"></div>
-
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="laura-flex" name="Acknowledges Laura"
-                            value="Yes, truly acts of saint" required>
-                        <label for="laura-flex">I acknowledge that Laura Ondich went out of her way to re-arrange plans
-                            to make this event happen, exemplifying her flexibility</label>
-                    </div>
+                    <!-- Laura flexibility checkbox removed per user request -->
                     <span class="cheeky-note">(This is non-negotiable. You cannot proceed without accepting this
                         truth.)</span>
                 </div>
@@ -164,7 +165,7 @@
                 special.</p>
 
             <div class="video-wrapper">
-                <video controls class="memorial-video" poster="gramma-von-static.jpg">
+                <video controls class="memorial-video" poster="gramma-von-static.jpg" playsinline webkit-playsinline>
                     <source src="gramma-von.webm" type="video/webm">
                     <!-- Fallback if user has mp4 but file list showed webm. 
                          If mp4 exists it should be added here too. 
