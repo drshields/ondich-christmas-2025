@@ -1,0 +1,457 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+    --color-bg-start: #0f2b1d; /* Deep Forest Green */
+    --color-bg-end: #3a0d16;   /* Burgundy/Wine */
+    --color-gold: #d4af37;
+    --color-gold-light: #f3e5ab;
+    --color-white: #f8f9fa;
+    --color-glass: rgba(255, 255, 255, 0.1);
+    --color-glass-border: rgba(255, 255, 255, 0.2);
+    --color-text-dark: #2c3e50;
+    --color-red: #c0392b;
+    --color-red-hover: #a93226;
+    
+    --font-heading: 'Great Vibes', cursive;
+    --font-subheading: 'Playfair Display', serif;
+    --font-body: 'Lato', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, var(--color-bg-start), var(--color-bg-end));
+    background-attachment: fixed;
+    color: var(--color-white);
+    font-family: var(--font-body);
+    min-height: 100vh;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Snowflake Container */
+#snow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    color: #fff;
+    font-size: 1em;
+    opacity: 0.8;
+    animation-name: snowfall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes snowfall {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+    100% { transform: translateY(105vh) rotate(360deg); opacity: 0.3; }
+}
+
+/* String Lights */
+.lights-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    z-index: 10;
+    display: flex;
+    justify-content: space-around;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.wire {
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    border-bottom: 2px solid #222;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.bulb {
+    width: 12px;
+    height: 18px;
+    border-radius: 50%;
+    background: #fff;
+    position: relative;
+    top: 15px;
+    z-index: 2;
+    animation: twinkle 1.5s infinite alternate;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.5);
+}
+
+.bulb:nth-child(4n+1) { background: #ff3333; box-shadow: 0 2px 10px #ff3333; animation-delay: 0s; }
+.bulb:nth-child(4n+2) { background: #33ff33; box-shadow: 0 2px 10px #33ff33; animation-delay: 0.5s; }
+.bulb:nth-child(4n+3) { background: #ffd700; box-shadow: 0 2px 10px #ffd700; animation-delay: 1s; }
+.bulb:nth-child(4n+4) { background: #3333ff; box-shadow: 0 2px 10px #3333ff; animation-delay: 1.5s; }
+
+@keyframes twinkle {
+    0% { opacity: 0.4; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1.1); box-shadow: 0 5px 20px currentColor; }
+}
+
+/* Main Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    z-index: 5;
+    text-align: center;
+}
+
+/* Header */
+header {
+    margin-bottom: 3rem;
+    padding-top: 2rem;
+}
+
+.logo-img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.5));
+    animation: glow-pulse 3s infinite ease-in-out;
+    margin-bottom: 1.5rem;
+}
+
+@keyframes glow-pulse {
+    0%, 100% { filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.4)); transform: scale(1); }
+    50% { filter: drop-shadow(0 0 25px rgba(212, 175, 55, 0.7)); transform: scale(1.02); }
+}
+
+.invite-text-lead {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    color: var(--color-gold);
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.invite-text-sub {
+    font-family: var(--font-subheading);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.invite-from {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #ddd;
+}
+
+/* Section Dividers */
+.divider {
+    margin: 3rem 0;
+    color: var(--color-gold);
+    opacity: 0.8;
+}
+
+.divider svg {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    fill: currentColor;
+}
+
+/* Glass Card */
+.glass-card {
+    background: var(--color-glass);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--color-glass-border);
+    border-radius: 15px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
+    color: var(--color-white);
+}
+
+/* Event Details */
+.event-details h2 {
+    font-family: var(--font-subheading);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-gold-light);
+}
+
+.detail-row {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.map-link {
+    color: var(--color-gold);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--color-gold);
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+.map-link:hover {
+    color: #fff;
+    border-bottom-style: solid;
+}
+
+/* Form Styles */
+.rsvp-section h2 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: var(--color-gold);
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--color-gold-light);
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid var(--color-glass-border);
+    background: rgba(255, 255, 255, 0.9);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-text-dark);
+    transition: all 0.3s;
+}
+
+.form-control:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.4);
+    background: #fff;
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 0.5rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--color-bg-start);
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+/* Special Checkbox */
+.favorite-grandson-acknowledgment {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border: 2px solid var(--color-gold);
+    border-radius: 10px;
+    background: rgba(212, 175, 55, 0.1);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+    animation: border-pulse 3s infinite;
+    text-align: center;
+}
+
+.favorite-grandson-acknowledgment .checkbox-group {
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.favorite-grandson-acknowledgment input {
+    width: 24px;
+    height: 24px;
+}
+
+.favorite-grandson-acknowledgment label {
+    font-family: var(--font-subheading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+}
+
+.cheeky-note {
+    display: block;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--color-gold-light);
+    margin-top: 0.5rem;
+}
+
+@keyframes border-pulse {
+    0%, 100% { box-shadow: 0 0 10px rgba(212, 175, 55, 0.2); border-color: var(--color-gold); }
+    50% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.6); border-color: #fff; }
+}
+
+/* Submit Button */
+.btn-submit {
+    display: inline-block;
+    background: var(--color-red);
+    color: white;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    font-family: var(--font-subheading);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background: var(--color-red-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 20px rgba(192, 57, 43, 0.4);
+}
+
+/* Memorial Section */
+.memorial-section {
+    margin-top: 4rem;
+    position: relative;
+    padding-top: 2rem;
+}
+
+.upward-pointer {
+    display: block;
+    margin: 0 auto 1.5rem;
+    width: 60px;
+    height: 60px;
+    fill: var(--color-gold);
+}
+
+.memorial-heading {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: var(--color-gold);
+    margin-bottom: 0.5rem;
+}
+
+.memorial-sub {
+    font-family: var(--font-subheading);
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #ddd;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.video-wrapper {
+    max-width: 100%;
+    width: 600px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--color-glass-border);
+}
+
+.memorial-video {
+    width: 100%;
+    display: block;
+}
+
+/* Footer */
+footer {
+    margin-top: 5rem;
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Thank You Page */
+.thank-you-content {
+    padding: 4rem 2rem;
+}
+
+.thank-you-heading {
+    font-family: var(--font-heading);
+    font-size: 5rem;
+    color: var(--color-gold);
+    margin: 1rem 0;
+}
+
+.thank-you-icon {
+    width: 150px;
+    height: 150px;
+    fill: var(--color-gold);
+    filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5));
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.thank-you-msg {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.btn-home {
+    margin-top: 2rem;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .invite-text-lead { font-size: 2.5rem; }
+    .invite-text-sub { font-size: 1.1rem; }
+    .glass-card { padding: 1.5rem; }
+    .rsvp-section h2 { font-size: 2.5rem; }
+    .memorial-heading { font-size: 2.5rem; }
+    .thank-you-heading { font-size: 3.5rem; }
+    
+    .favorite-grandson-acknowledgment label {
+        font-size: 1rem;
+    }
+}

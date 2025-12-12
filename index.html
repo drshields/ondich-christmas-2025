@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ondich Christmas Celebration 2025</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Meta tags for social sharing -->
+    <meta property="og:title" content="Ondich Christmas Celebration 2025">
+    <meta property="og:description" content="Join us for a Christmas Celebration! Saturday, December 27th, 2025">
+    <meta property="og:image" content="ondich-christmas.png">
+</head>
+
+<body>
+
+    <!-- Falling Snow Container -->
+    <div id="snow-container"></div>
+
+    <!-- String Lights -->
+    <div class="lights-container">
+        <div class="wire"></div>
+        <!-- Generating bulbs -->
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+    </div>
+
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <img src="ondich-christmas.png" alt="Ondich Christmas" class="logo-img">
+            <h1 class="invite-text-lead">You're Cordially Invited</h1>
+            <h2 class="invite-text-sub">Join Us for a Christmas Celebration</h2>
+            <p class="invite-from">Invited by Laura Ondich</p>
+        </header>
+
+        <!-- Holly Divider -->
+        <div class="divider">
+            <svg viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M50 10c-5 0-8-5-12-2s-3 8-8 10c-5 2-8-2-10-5s-5-8-10-8c-3 0-5 3-5 5s2 5 5 5c3 0 5-3 8-5 2 3 5 5 10 3 2 4 5 5 8 2 4-3 8 2 12 2s8-5 12-2c3 3 6-2 8-2 3 0 6 5 8 2 4-3 8 2 12 2 5 2 8-3 10-5 2 3 5 5 10 3 3 0 5-3 8-5 2 3 5 5 10 3 3 0 5-3 5-5s-2-5-5-5c-5 0-8 5-10 8-2 3-5 5-10 5s-8-2-12-2c-5-2-8-3-12 2s-6 2-11 2z"
+                    fill="currentColor" />
+                <circle cx="50" cy="18" r="2" fill="#c0392b" />
+                <circle cx="46" cy="16" r="1.5" fill="#c0392b" />
+                <circle cx="54" cy="16" r="1.5" fill="#c0392b" />
+            </svg>
+        </div>
+
+        <!-- Event Details Card -->
+        <section class="glass-card event-details">
+            <h2>The Details</h2>
+            <div class="detail-row">
+                <span>🗓️</span>
+                <strong>Saturday, December 27th, 2025</strong>
+            </div>
+            <div class="detail-row">
+                <span>🕒</span>
+                <strong>10:00 AM</strong>
+            </div>
+            <div class="detail-row" style="flex-direction: column; margin-top: 1.5rem;">
+                <span>📍</span>
+                <div>10870 102nd Ave N<br>Maple Grove, MN 55369</div>
+                <a href="https://www.google.com/maps/search/?api=1&query=10870+102nd+Ave+N+Maple+Grove+MN+55369"
+                    target="_blank" class="map-link">View Map</a>
+            </div>
+        </section>
+
+        <!-- RSVP Form -->
+        <section class="glass-card rsvp-section">
+            <h2>RSVP</h2>
+            <form action="https://formsubmit.co/laura.ondich@gmail.com" method="POST">
+                <!-- Config Fields -->
+                <!-- Ideally we'd use relative path but for formsubmit redirection to work reliably across envs, absolute is safer, 
+                     but we'll stick to 'thankyou.html' as it works if on same domain root or handled by browser relative resolution -->
+                <input type="hidden" name="_next" value="thankyou.html">
+                <input type="hidden" name="_subject" value="🎄 Christmas RSVP Received!">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+
+                <div class="form-group">
+                    <label for="guests">Number of Guests (including yourself) *</label>
+                    <input type="number" id="guests" name="Total Guests" class="form-control" min="1" value="1"
+                        required>
+                </div>
+
+                <!-- SPECIAL REQUIRED CHECKBOX -->
+                <div class="favorite-grandson-acknowledgment">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="favorite" name="Acknowledges Derrick" value="Yes, obviously"
+                            required>
+                        <label for="favorite">I acknowledge that Derrick Shields is Lavon's favorite Grandchild and
+                            family member in general</label>
+                    </div>
+                    <span class="cheeky-note">(This is non-negotiable. You cannot proceed without accepting this
+                        truth.)</span>
+                </div>
+
+                <button type="submit" class="btn-submit">Send My RSVP ✨</button>
+            </form>
+        </section>
+
+        <!-- Upward Arrow/Divider -->
+        <div class="memorial-divider">
+            <svg class="upward-pointer" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L4 12h5v10h6V12h5L12 2z" fill="currentColor" />
+            </svg>
+        </div>
+
+        <!-- Memorial Video Section -->
+        <section class="memorial-section">
+            <h2 class="memorial-heading">In Loving Memory</h2>
+            <p class="memorial-sub">Celebrating the spirit of family and honoring those who made our traditions so
+                special.</p>
+
+            <div class="video-wrapper">
+                <video controls class="memorial-video" poster="">
+                    <source src="gramma-von.webm" type="video/webm">
+                    <!-- Fallback if user has mp4 but file list showed webm. 
+                         If mp4 exists it should be added here too. 
+                         I only saw .webm in the file list. -->
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>Made with ❤️ for the Ondich Family</p>
+            <div style="font-size: 1.5rem; margin-top: 0.5rem;">❄️</div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <!-- Live reload script for development if needed, standard assumption for simple static -->
+</body>
+
+</html>
